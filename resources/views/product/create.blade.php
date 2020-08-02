@@ -112,6 +112,22 @@
                                                         </span>
                                                     @endif
                                                 </div>
+
+                                                <div class="col-md-5">
+                                                    <div class="form-group"><label>Status</label>
+                                                        <select name="status" class="form-control" id="status">
+                                                            <option value="">Select Status</option>
+                                                            <option value="1" @if(old('status')) {{ 'status' }} @endif>Enable</option>
+                                                            <option value="0" @if(old('status')) {{ 'status' }} @endif>Disable</option>
+                                                        </select>
+                                                    </div>
+                                                    @if ($errors->has('status'))
+                                                        <span class="text-danger">
+                                                            <strong>{{ $errors->first('status') }}</strong>
+                                                        </span>
+                                                    @endif
+                                                </div>
+
                                             </div>
 
                                             <div class="form-group mt-6 mb-2">
